@@ -14,8 +14,8 @@ class Environment {
         Dog dog1;
         Dog dog2;
         Food* food1;
-        Cat cat1;
-        Cat cat;
+        Cat cat1("Vasia", 0, 0, 100);
+        Cat cat2("Leopold", 0, 0, 100);
         int width;
         int height;
 
@@ -48,6 +48,16 @@ class Environment {
                     {
                         std::cout << this->dog2.getSymbol();
                     }
+
+                    else if (x == this->cat1.getX() && y == this->cat1.getY())
+                    {
+                        std::cout << this->cat1.getSymbol();
+                    }
+                    else if (x == cat2.getX() && y == cat2.getY())
+                    {
+                        std::cout << this->cat2.getSymbol();
+                    }
+
                     else if (x == food1->getX() && y == food1->getY())
                     {
                         std::cout << this->food1->getSymbol();
@@ -65,6 +75,12 @@ class Environment {
 
             std::cout << "Energia psa 1: " << this->dog1.getEnergy() << std::endl;
             std::cout << "Energia psa 2: " << this->dog2.getEnergy() << std::endl << std::endl;
+
+            std::cout << "Energia kocura 1: " << this->cat1->getEnergy() << std::endl;
+            std::cout << "Energia psa 2: " << this->cat2.getEnergy << std::endl << std::endl;
+
+            std::cout <<  cat1.timeForEscape << std::endl;
+            std::cout <<  cat2.timeForEscape << std::endl;
         }
 
     public:

@@ -12,15 +12,15 @@ typedef int number;
 
 class Dog;
 
-class Cat :: public GameObject{
+class Cat : public GameObject{
     private:
         string name;
         string calmSound;
         string angrySound;
         double energy
     public:
-    Cat();
-    Cat(string name, number x, number y, char symbol, double energy): GameObject(x,y, symbol), name(name), energy(energy){};
+    Cat(): name("Vasia"), calmSound("MURRRRR"), angrySound("SCHHHH"), energy(100);
+    Cat(string name, number x, number y, double energy): GameObject(x,y, "C"), name(name), energy(energy){};
     ~Cat(){};
     string getName(){
         return this->name;
@@ -30,6 +30,10 @@ class Cat :: public GameObject{
     }
     string getAngrySound(){
         return this->angrySound;
+    }
+
+    double getEnergy(){
+        return this->energy;
     }
 
     void move(number x, number y){
